@@ -1,0 +1,7 @@
+{
+  "name": "MyCredit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
