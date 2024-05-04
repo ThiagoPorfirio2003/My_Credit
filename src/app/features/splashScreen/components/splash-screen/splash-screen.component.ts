@@ -36,7 +36,7 @@ export class SplashScreenComponent
               this.splashScreenStyle = 'justify-content: flex-end'
               this.splashScreenClass = 'slide-in-elliptic-bottom-bck';
               this.showText = true;
-            }, 700)
+            }, 1750)
 
 
             setTimeout(() => 
