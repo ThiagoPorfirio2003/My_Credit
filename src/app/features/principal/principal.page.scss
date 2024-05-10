@@ -1,0 +1,93 @@
+.screen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+}
+
+
+div.creditCounter
+{
+    width: 100%;
+
+    h1,h2{
+        font-size: 8rem;
+        text-align: center;
+        display: block;
+        background-color: var(--ion-color-secondary);
+        color: var(--ion-color-primary);;
+        margin: 0px;
+    }
+
+    h2{
+        font-size: 3rem;
+    }
+}
+
+ion-button{
+    --background: var(--ion-color-primary);
+    --color: var(--ion-color-secondary);
+    font-size: 4rem;
+    margin: 0px;
+    width: 100%;
+
+    /*
+            --background: var(--ion-color-secondary);
+        --color: var(--ion-color-primary);
+        --border-color: var(--ion-color-primary);
+    */
+}
+
+.iconContainer
+{
+    margin-top: 5%;
+    border-radius: 100%;
+    margin-bottom: 2.5%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    max-width: 95%;
+}
+
+.imgIcon
+{
+    border-radius: 100%;
+}
+
+.action{
+    width: 95%;
+    margin-top: 3%;
+    //box-sizing: border-box;
+    //border: solid 5px;
+}
+
+.ionTopTag
+{
+    width: 100%;
+    margin: 0;
+    border-radius: 25px 25px 0 0 ;
+    border-width: 7px 7px 0px 7px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+.betweenTag
+{
+    width: 100%;
+    margin: 0;
+    border-width: 0px 7px 0px 7px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+.ionBottomTag
+{
+    width: 100%;
+    margin: 0;
+    --border-radius: 0 0 25px 25px;
+    --border-width: 0 7px 7px 7px;
+    --border-style: solid;
+    box-sizing: border-box;
+}
