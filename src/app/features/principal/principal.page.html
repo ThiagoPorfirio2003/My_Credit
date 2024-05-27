@@ -4,18 +4,14 @@
   <div class="screen">
     <div class="action">
       <div class="creditCounter primaryInput">
-        <h2 class="ionTopTag">Crédito</h2>
-        <h1 class="betweenTag">$160</h1>
+        <h2 class="">Crédito</h2>
+        <h1 class="ionBottomTag">{{this.authService.myUser.credit}}</h1>
       </div>
-  
-      <ion-button class="secondaryInput ionBottomTag">
-        Cargar crédito
-      </ion-button>
     </div>
 
 
     <section class="iconContainer">
-      <img class="imgIcon" src="../../../../assets/SplashScreen/MyCredit_NoBack.png">
+      <img (click)="this.analyzeQR()" class="imgIcon" src="../../../../assets/SplashScreen/MyCredit_NoBack.png">
     </section>
   </div>
 

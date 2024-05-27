@@ -6,6 +6,7 @@ import { AuthService } from '../services/auth.service';
 import { DatabaseService } from '../../data/database.service';
 import { MyForm } from 'src/app/core/models/form.model';
 import { MyStatus } from 'src/app/core/models/status.model';
+import { CollectionsNames } from 'src/app/core/models/collectionNames';
 
 
 @Component({
@@ -36,7 +37,7 @@ export class AuthPage{
 
   public changeFastAccessUserSelected(userIndex : number)
   {
-    this.fastAccessUserSelected = this.fastAccessUsers[userIndex];
+    this.fastAccessUserSelected = {email: this.fastAccessUsers[userIndex].email, password: this.fastAccessUsers[userIndex].password}
   }
 
   public async receiveAccessData(userAccessData : MyForm<MyUserAccessData>)
@@ -52,12 +53,13 @@ export class AuthPage{
       {
         const userCredential = await this.authService.logIn(userAccessData.data);
 
-        const doc = await this.databaseService.getDocRef('users', userCredential.user.uid);
+        const doc = await this.databaseService.getDocRef(CollectionsNames.USER, userCredential.user.uid);
 
         if(doc.exists())
         {
           loginStatus.success = true;
           this.authService.logMyUser(doc.data() as MyUser);
+          this.fastAccessUserSelected = {email: '', password: ''};
           this.utilsServices.changeRoute('/principal');
         }
       }

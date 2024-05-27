@@ -13,16 +13,30 @@ div.creditCounter
     width: 100%;
 
     h1,h2{
-        font-size: 8rem;
         text-align: center;
         display: block;
-        background-color: var(--ion-color-secondary);
-        color: var(--ion-color-primary);;
         margin: 0px;
     }
 
     h2{
+        background-color: var(--ion-color-primary);
+        color: var(--ion-color-secondary);
         font-size: 3rem;
+
+        border-radius: 25px 25px 0 0 ;
+        border-width: 3px 3px 0px 3px;
+        border-style: solid;
+    }
+
+    h1{
+        font-size: 11rem;
+
+        background-color: var(--ion-color-secondary);
+        color: var(--ion-color-primary);
+
+        border-radius: 0 0 25px 25px;
+        border-width: 0 3px 3px 3px;
+        border-style: solid;
     }
 }
 
@@ -42,7 +56,7 @@ ion-button{
 
 .iconContainer
 {
-    margin-top: 5%;
+    margin-top: 15%;
     border-radius: 100%;
     margin-bottom: 2.5%;
     flex-direction: row;
@@ -58,7 +72,7 @@ ion-button{
 
 .action{
     width: 95%;
-    margin-top: 3%;
+    margin-top: 15%;
     //box-sizing: border-box;
     //border: solid 5px;
 }
