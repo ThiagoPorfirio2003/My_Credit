@@ -84,7 +84,7 @@ export class AuthPage{
     else
     {  
       this.utilsServices.showSweet({title: userAccessData.status.message.header, text: userAccessData.status.message.content, position: 'top', timer: 3000,
-         showConfirmButton: false, customClass: 'toast', toast: true, timerProgressBar: true, background: '#30602E'
+         showConfirmButton: false, customClass: 'toast', toast: true, timerProgressBar: true, background: '#FDF4EC'
       });
     }
   }
